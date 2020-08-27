@@ -4,9 +4,11 @@
 ### Open Terminal
 ### `git clone https://github.com/RaiyanKhalil/phonebook.git`
 ### `cd phonebook/backend/`
+### `npm install`
 ### `nodemon server`
 ### Open Another Terminal
 ### `cd phonebook/`
+### `npm install`
 ### `npm start`
 
 ### Validation & Search using number is not working
