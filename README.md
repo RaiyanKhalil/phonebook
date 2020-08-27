@@ -1,5 +1,5 @@
-A simple Phonebook Application.
-Please follow the instructions below to run the application.
+### A simple Phonebook Application.
+### Please follow the instructions below to run the application.
 
 ### Open Terminal
 ### `git clone https://github.com/RaiyanKhalil/phonebook.git`
