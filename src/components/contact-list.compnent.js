@@ -17,6 +17,11 @@ export default class ContactList extends Component {
     super(props);
 
     this.deleteContact = this.deleteContact.bind(this)
+    // this.onChangeNumber = this.onChangeNumber.bind(this);
+    // this.onSubmit = this.onSubmit.bind(this);
+    // this.state = {
+    //   number: '',
+    // }
 
     this.state = {contact: []};
   }
@@ -40,6 +45,28 @@ export default class ContactList extends Component {
     })
   }
 
+  // onChangeNumber(e) {
+  //   //const phoneRegEx = /^(?:\+?88)?01[15-9]\d{8}$/
+  //   this.setState({
+  //     number: e.target.value
+  //   })
+  // }
+
+  // onSubmit(e) {
+  //   e.preventDefault();
+
+  //   const contacts = {
+  //     number: this.state.number,
+  //   }
+
+  //   //alert(contacts.number);
+
+  //   axios.get('http://localhost:5000/contact/find', contacts)
+  //     .then(res => console.log(res.data));
+
+  //   //window.location = '/';
+  // }
+
   contactList() {
     return this.state.contact.map(currentcontact => {
       return <Contact contact={currentcontact} deleteContact={this.deleteContact} key={currentcontact._id}/>;
@@ -48,6 +75,7 @@ export default class ContactList extends Component {
 
   render() {
     return (
+      <div>
       <div>
         <h3>Contact List</h3>
         <table className="table">
@@ -62,6 +90,24 @@ export default class ContactList extends Component {
             { this.contactList() }
           </tbody>
         </table>
+      </div>
+      {/* <div>
+        <form onSubmit={this.onSubmit}>
+        <div className="form-group"> 
+          <label>Enter number to search using number</label>
+            <input  
+                type="number"
+                required
+                className="form-control"
+                value={this.state.number}
+                onChange={this.onChangeNumber}
+            />
+        </div>
+        <div className="form-group">
+          <input type="submit" value="Save" className="btn btn-primary" />
+        </div>
+      </form>
+      </div> */}
       </div>
     )
   }

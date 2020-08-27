@@ -21,6 +21,14 @@ router.route('/add').post((req, res) => {
     .catch(err => res.status(400).json('Error: ' + err));
   });
 
+// router.route('/find/number=?').get((req, res) => {
+//     //var cursor = Contact.find({number: })
+//     const query = req.query;
+//     Contact.find(query)
+//     .then(contact => res.json(contact))
+//     .catch(err => res.status(400).json('Error: ' + err));
+// });
+
 router.route('/:id').get((req, res) => {
     Contact.findById(req.params.id)
         .then(contact => res.json(contact))
