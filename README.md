@@ -11,7 +11,7 @@
 ### `npm install`
 ### `npm start`
 
-### Validation & Search using number is not working
+### Search using number is not working
 
 ### Sometimes Database Connection can fail, it will mention Database Connection failed when running nodemon. 
 ### Just copy "ATLAS_URI=mongodb+srv://Raiyan:Bose0987@cluster0.ddmkb.gcp.mongodb.net/<dbname>?retryWrites=true&w=majority" and paste it in .env file found in routes folder. Thank you
