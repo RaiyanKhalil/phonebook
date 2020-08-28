@@ -80,6 +80,7 @@ export default class EditContact extends Component {
           <label>Name: </label>
             <input  type="text"
                 required
+                placeholder="Raiyan"
                 className="form-control"
                 value={this.state.username}
                 onChange={this.onChangeUsername}
@@ -87,8 +88,10 @@ export default class EditContact extends Component {
         </div>
         <div className="form-group"> 
           <label>Number: </label>
-          <input  type="number"
+          <input  type="String"
               required
+              placeholder="+88/01000000000"
+              pattern="\+?(88)?0?1[56789][0-9]{8}\b"
               className="form-control"
               value={this.state.number}
               onChange={this.onChangeNumber}

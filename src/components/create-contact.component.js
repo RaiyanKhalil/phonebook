@@ -38,10 +38,9 @@ export default class CreateContact extends Component {
   }
 
   onChangeNumber(e) {
-    //const phoneRegEx = /^(?:\+?88)?01[15-9]\d{8}$/
-    this.setState({
-      number: e.target.value
-    })
+      this.setState({
+        number: e.target.value
+      })
   }
 
   onSubmit(e) {
@@ -70,6 +69,7 @@ export default class CreateContact extends Component {
             <input  
                 type="text"
                 required
+                placeholder="Raiyan"
                 className="form-control"
                 value={this.state.username}
                 onChange={this.onChangeUsername}
@@ -77,9 +77,11 @@ export default class CreateContact extends Component {
         </div>
         <div className="form-group"> 
           <label>Number: </label>
-          <input  type="number"
+          <input  type="String"
               required
+              placeholder="+88/01000000000"
               className="form-control"
+              pattern="\+?(88)?0?1[56789][0-9]{8}\b"
               value={this.state.number}
               onChange={this.onChangeNumber}
               />
